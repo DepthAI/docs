@@ -1,72 +1,157 @@
 ---
 title: Bitbucket
-description: Connect your Bitbucket repositories to Depth AI
+description: Connect your Bitbucket repositories to Depth AI for enhanced code understanding and collaboration
 ---
 
-To use Depth AI with your Bitbucket repositories, you'll need to first connect and authorize your Bitbucket account. This guide walks you through the setup process.
+Depth AI's Bitbucket integration enables AI-powered code understanding, documentation assistance, and intelligent code search across your Bitbucket repositories. This guide provides detailed steps to set up and configure the integration.
 
 <Steps>
-  <Step title="Connect Bitbucket Account">
-    Navigate to the Integrations Settings page and select Bitbucket from the available integrations. Click the "Connect" button to start the authorization process.
+  <Step title="Access Integration Settings">
+    1. Log into your Depth AI dashboard
+    2. Navigate to [Integration Settings](https://app.trydepth.ai/new-settings/integrations)
+    3. Locate the Bitbucket section
+    4. Click "Connect" to initiate the integration
+    
+    <Frame>
+      <img src="/images/bitbucket/connect.png" alt="Bitbucket Connect Button" />
+    </Frame>
   </Step>
 
   <Step title="Authorize Depth AI">
-    You'll be redirected to Bitbucket to authorize the Depth AI application. Review the requested permissions and click "Grant access" to proceed.
+    You'll be redirected to Bitbucket's authorization page where you'll need to:
+    1. Review the requested permissions
+    2. Select your workspace (if you have multiple)
+    3. Click "Grant access"
     
+    <Frame>
+      <img src="/images/bitbucket/authorize.png" alt="Bitbucket Authorization Screen" />
+    </Frame>
+
     <Info>
-      Depth AI requires read access to your repositories to index and analyze your codebase.
+      For organization accounts, you may need administrator approval to install the integration. Contact your Bitbucket workspace admin if you don't have sufficient permissions.
     </Info>
   </Step>
 
-  <Step title="Select Repositories">
-    After authorization, choose which repositories you want to connect to Depth AI. You can:
-    - Grant access to all repositories
-    - Select specific repositories to connect
+  <Step title="Configure Repository Access">
+    After authorization, you'll be prompted to configure repository access:
+
+    1. Choose access level:
+       - **All repositories** - Recommended for team-wide usage
+       - **Selected repositories** - Better for specific project focus
     
+    2. Set repository permissions:
+       - Code reading
+       - Pull request access
+       - Repository metadata
+    
+    <Frame>
+      <img src="/images/bitbucket/repo-select.png" alt="Repository Selection Screen" />
+    </Frame>
+
     <Warning>
-      Only grant access to repositories you actively want to use with Depth AI.
+      Only grant access to repositories that will actively use Depth AI features. You can modify these permissions later in your Bitbucket workspace settings.
     </Warning>
   </Step>
 </Steps>
 
-## Repository Access
+## Detailed Permissions Overview
 
-Depth AI requires the following permissions for Bitbucket repositories:
+Depth AI requires specific permissions to provide its full feature set:
 
-- Read access to repository code
-- Read access to pull requests
-- Read access to repository metadata
+### Repository Code Access
+- **Read access to source code**: Enables AI to understand your codebase
+- **Branch information**: Allows tracking of different code versions
+- **Commit history**: Provides context for code changes
 
-These permissions allow Depth AI to:
-- Index your codebase for AI-powered search and analysis
-- Provide context-aware responses about your code
-- Track changes and updates in your repositories
+### Pull Request Integration
+- **PR content reading**: Enables code review assistance
+- **PR metadata access**: Allows tracking PR status and updates
+- **Comment access**: Enables AI to understand discussion context
+
+### Repository Metadata
+- **Repository settings**: Basic repository configuration access
+- **User permissions**: Understanding of team structure
+- **Project organization**: Access to project structure and organization
+
+<Info>
+These permissions are essential for features like:
+- Intelligent code search across repositories
+- Context-aware code explanations
+- Automated documentation assistance
+- Code review suggestions
+</Info>
+
+## Advanced Configuration
+
+### Workspace Settings
+Fine-tune your integration by configuring:
+- Repository-specific access levels
+- Branch protection rules compatibility
+- Custom webhook settings (if needed)
+
+### Security Considerations
+- Regular audit of connected repositories
+- Periodic review of granted permissions
+- IP allowlist configuration (for enterprise setups)
+
+## Troubleshooting Guide
+
+### Common Issues and Solutions
+
+1. **Connection Failures**
+   - Verify Bitbucket account permissions
+   - Check workspace access settings
+   - Ensure no conflicting integrations
+
+2. **Repository Access Issues**
+   - Confirm repository visibility settings
+   - Check workspace permission levels
+   - Verify branch protection rules
+
+3. **Authorization Errors**
+   - Clear browser cache and cookies
+   - Re-authenticate Bitbucket account
+   - Check for expired tokens
+
+4. **Integration Not Working**
+   - Verify webhook configurations
+   - Check repository access permissions
+   - Ensure repository is properly indexed
+
+<Note>
+If issues persist, check our [status page](https://status.trydepth.ai) or contact support with your Bitbucket workspace ID and affected repository names.
+</Note>
 
 ## Next Steps
 
-Now that you've connected Bitbucket, you can:
+After successful integration, explore these features:
 
 <CardGroup cols={2}>
   <Card 
-    title="Add Your First Repository" 
+    title="Repository Setup Guide" 
     icon="book-bookmark"
     href="/guides/adding-a-new-repository">
-    Learn how to add and index your repositories
+    Learn how to add and configure your first repository
   </Card>
   
   <Card 
-    title="Setup AI Assistants" 
+    title="AI Assistant Configuration" 
     icon="robot"
     href="/guides/assistants">
-    Configure AI assistants for your repositories
+    Set up AI-powered code assistance for your team
+  </Card>
+
+  <Card 
+    title="Code Search Setup" 
+    icon="magnifying-glass"
+    href="/guides/code-search">
+    Configure intelligent code search
+  </Card>
+
+  <Card 
+    title="Team Collaboration" 
+    icon="users"
+    href="/guides/team-setup">
+    Optimize for team usage
   </Card>
 </CardGroup>
-
-## Troubleshooting
-
-If you encounter any issues during the connection process:
-
-1. Ensure you have admin access to the Bitbucket workspace or repositories you're trying to connect
-2. Check that your Bitbucket account has the necessary permissions
-3. Try disconnecting and reconnecting the integration
-4. Verify that you've granted all required permissions during the authorization step
