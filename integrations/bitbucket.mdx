@@ -1,0 +1,72 @@
+---
+title: Bitbucket
+description: Connect your Bitbucket repositories to Depth AI
+---
+
+To use Depth AI with your Bitbucket repositories, you'll need to first connect and authorize your Bitbucket account. This guide walks you through the setup process.
+
+<Steps>
+  <Step title="Connect Bitbucket Account">
+    Navigate to the Integrations Settings page and select Bitbucket from the available integrations. Click the "Connect" button to start the authorization process.
+  </Step>
+
+  <Step title="Authorize Depth AI">
+    You'll be redirected to Bitbucket to authorize the Depth AI application. Review the requested permissions and click "Grant access" to proceed.
+    
+    <Info>
+      Depth AI requires read access to your repositories to index and analyze your codebase.
+    </Info>
+  </Step>
+
+  <Step title="Select Repositories">
+    After authorization, choose which repositories you want to connect to Depth AI. You can:
+    - Grant access to all repositories
+    - Select specific repositories to connect
+    
+    <Warning>
+      Only grant access to repositories you actively want to use with Depth AI.
+    </Warning>
+  </Step>
+</Steps>
+
+## Repository Access
+
+Depth AI requires the following permissions for Bitbucket repositories:
+
+- Read access to repository code
+- Read access to pull requests
+- Read access to repository metadata
+
+These permissions allow Depth AI to:
+- Index your codebase for AI-powered search and analysis
+- Provide context-aware responses about your code
+- Track changes and updates in your repositories
+
+## Next Steps
+
+Now that you've connected Bitbucket, you can:
+
+<CardGroup cols={2}>
+  <Card 
+    title="Add Your First Repository" 
+    icon="book-bookmark"
+    href="/guides/adding-a-new-repository">
+    Learn how to add and index your repositories
+  </Card>
+  
+  <Card 
+    title="Setup AI Assistants" 
+    icon="robot"
+    href="/guides/assistants">
+    Configure AI assistants for your repositories
+  </Card>
+</CardGroup>
+
+## Troubleshooting
+
+If you encounter any issues during the connection process:
+
+1. Ensure you have admin access to the Bitbucket workspace or repositories you're trying to connect
+2. Check that your Bitbucket account has the necessary permissions
+3. Try disconnecting and reconnecting the integration
+4. Verify that you've granted all required permissions during the authorization step
